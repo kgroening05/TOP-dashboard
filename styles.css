@@ -17,6 +17,27 @@ div.container{
 header{
     background-color: blue;
     grid-area: header;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: 
+    "searchbar account"
+    "greeting actions";
+}
+
+.searchbar{
+    grid-area: searchbar;
+}
+
+.account{
+    grid-area: account;
+}
+
+.greeting{
+    grid-area: greeting;
+}
+
+.actions{
+    grid-area: actions;
 }
 
 .sidebar{
