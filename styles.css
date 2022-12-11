@@ -22,6 +22,7 @@ header{
     grid-area: header;
     display: grid;
     grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
     grid-template-areas: 
     "searchbar account"
     "actions actions";
@@ -66,10 +67,41 @@ button.account-settings{
 
 .actions{
     grid-area: actions;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.action-buttons ul{
+    list-style: none;
+    display: flex;
+    gap: 16px;
+}
+
+.action-button{
+    background-color: cornflowerblue;
+    border: none;
+    color: white;
+    height: 2rem;
+    width: 10ch;
+    border-radius: 2rem;
 }
 
 .greeting{
     grid-area: greeting;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.greeting .iconify{
+    font-size: 4rem;
+}
+
+.account-name{
+    font-size: 1.5rem;
+    font-weight: 500;
 }
 
 .sidebar{
