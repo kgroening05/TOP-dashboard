@@ -9,9 +9,10 @@ body{
 }
 
 div.container{
+    height: 100vh;
     display: grid;
     grid-template-columns: 1fr 4fr;
-    grid-template-rows: 1fr 4fr;
+    grid-template-rows: 160px 4fr;
     grid-template-areas: 
     "sidebar header"
     "sidebar main";
@@ -22,7 +23,7 @@ header{
     grid-area: header;
     display: grid;
     grid-template-columns: 2fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 80px 80px;
     grid-template-areas: 
     "searchbar account"
     "actions actions";
@@ -135,4 +136,35 @@ button.account-settings{
 main{
     background-color: cadetblue;
     grid-area: main;
+    display: grid;
+    grid-template-columns: 2.5fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "projects announcements"
+    "projects trending";
+    gap: 16px;    
+}
+
+.projects{
+    grid-area: projects;
+}
+
+.project-cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 16px;
+}
+
+.projectcard{
+    background-color: white;
+    height:300px
+}
+
+
+.announcements{
+    grid-area: announcements;
+}
+
+.trending{
+    grid-area: trending;
 }
