@@ -109,6 +109,29 @@ button.account-settings{
     grid-area: sidebar;
 }
 
+.sidebar ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+    color: white;
+    font-size: 1.2rem;
+    padding: 16px;
+}
+
+.sidebar-top{
+    font-size: 1.5rem;
+}
+
+.sidebar .iconify{
+    padding-right: 8px;
+}
+
+.sidebar .spacer{
+    height: 40px;
+}
+
 main{
     background-color: cadetblue;
     grid-area: main;
