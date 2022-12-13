@@ -137,11 +137,11 @@ main{
     background-color: cadetblue;
     grid-area: main;
     display: grid;
-    grid-template-columns: 2.5fr 1fr;
+    grid-template-columns: 3fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-template-areas: 
-    "projects announcements"
-    "projects trending";
+    "projects right-sidebar"
+    "projects right-sidebar";
     gap: 16px;    
     padding: 16px;
 }
@@ -150,7 +150,7 @@ main{
     grid-area: projects;
 }
 
-.projects h2{
+h2{
     font-size: 24pt;
     padding-bottom: 16px;
 }
@@ -167,6 +167,7 @@ main{
     height:200px;
     border-radius: 16px;
     display: grid;
+    border-left: 10px solid blue;
 }
 
 .projectcard h4{
@@ -179,11 +180,39 @@ main{
     justify-self: right;
 }
 
+.right-sidebar{
+    grid-area: right-sidebar;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+}
 
 .announcements{
-    grid-area: announcements;
+}
+
+.announcement-card{
+    background-color: white;
+    border-radius: 16px;
+    padding: 16px;
+    display: grid;
+    grid-template-rows: repeat(3, minmax(1fr, 300px));
+    gap: 10px;
+}
+
+.announcement p{
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+h5{
+    font-size: 12pt;
+    padding-bottom: 4px;
+}
+
+hr{
+    margin-top: 10px;
 }
 
 .trending{
-    grid-area: trending;
 }
